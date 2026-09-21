@@ -1,14 +1,20 @@
 package edu.unilibre.datos;
 
 public class Tarifa {
+    private double valorPorMinuto = 10.0;
 
-    private String valorPorMinuto;
-
-    public Tarifa(String valorPorMinuto) {
-        this.valorPorMinuto = valorPorMinuto;
+    public Tarifa() {
     }
 
-    public String getValorPorMinuto() {
+    public double calcularCosto(long minutos) {
+        return minutos * valorPorMinuto;
+    }
+
+    public double getValorPorMinuto() {
         return valorPorMinuto;
+    }
+
+    public void setValorPorMinuto(double valorPorMinuto) {
+        this.valorPorMinuto = valorPorMinuto;
     }
 }
